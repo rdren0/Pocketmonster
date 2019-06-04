@@ -9,14 +9,14 @@ describe('Action tests', () => {
             expect(expected).toEqual(result)
         })
     })
-    describe('gatherPokemon', () =>{
+    describe('anError', () =>{
         it('it returns an object with an messag eand a type of "HAS_ERRORED" ', () =>{
             let expected = {type: 'HAS_ERRORED', message:'An error has occured'}
             let result = actions.anError('An error has occured')
             expect(expected).toEqual(result)
         })
     })
-    describe('gatherPokemon', () =>{
+    describe('loading', () =>{
         it('it returns an object with a boolean and a type of "IS_LOADING" ', () =>{
             let expected = {type: 'IS_LOADING', message: true}
             let result = actions.loading(true)
