@@ -17,7 +17,6 @@ class App extends Component {
   this.props.anError(false)
    this.fetchCall()
    .then(result => this.props.gatherPokemon(result))
-   this.props.loading(false)
 
   }
 
@@ -27,6 +26,7 @@ class App extends Component {
      this.props.hasErrored(true)
     throw new Error('Unable to fetch pokemon')
    }
+   this.props.loading(false)
    return await response.json()
   }
 
